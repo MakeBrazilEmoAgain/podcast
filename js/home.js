@@ -1,4 +1,3 @@
-var podcasts = [];
 var jqxhr = $.get( "https://makebrazilemo.herokuapp.com/find-all-podcast")
     .done(function(data) {
         podcasts = data.content;
@@ -21,7 +20,6 @@ var jqxhr = $.get( "https://makebrazilemo.herokuapp.com/find-all-podcast")
             '</div>');
         }
         $('#podcast-list').html(list);
-
     })
     .fail(function(error) {
         alert( "error" );
