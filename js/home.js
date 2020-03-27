@@ -9,6 +9,6 @@ function HomeController($http, $scope) {
     }).then(function successCallback(response) {
         $scope.podcasts = response.data.content
     }, function errorCallback(response) {
-        $scope.podcasts = "Nenhum podcast"
+        $scope.error = "Nenhum podcast disponivel no momento"
     });
 }
