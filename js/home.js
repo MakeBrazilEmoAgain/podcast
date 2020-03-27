@@ -5,7 +5,7 @@ var jqxhr = $.get( "https://makebrazilemo.herokuapp.com/find-all-podcast")
         var list = [];
         for(var i = 0; i < podcasts.length; i++){
             list.push('<div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">' +
-            '   <div class="image" style="background-image: url(images/img_1.jpg);"></div>' +
+            '   <div class="image" style="background-image: url('+ podcasts[i].image +');"></div>' +
             '       <div class="text">' +
             '           <h3 class="font-weight-light"><a href="#">' + podcasts[i].title + '</a></h3>' +
             '           <div class="text-white mb-3"><span class="text-black-opacity-05"><small>De Kleber Nunes <span class="sep">/</span>' + podcasts[i].duration + '</small></span></div>' +
