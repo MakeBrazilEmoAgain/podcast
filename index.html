@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="home">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <head>
     <title>MakeBrazilEmoAgain &mdash; Seu podcast emo e depressivo</title>
     <link rel="icon" type="image/jpg" href="images/emoticon.jpg" />
@@ -7,8 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900"> 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -19,7 +19,6 @@
 
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
-    
   </head>
   <body ng-controller="HomeController">
   
@@ -77,7 +76,22 @@
         </div>
         
         <div ng-repeat="podcast in podcasts"> 
-
+          
+          <div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">
+            <div class="image" style="background-image: url('images/img_1.jpg');"></div>
+            
+            <div class="text">
+              <h3 class="font-weight-light"><a href="single-post.html">{{podcast.title}}</a></h3>
+              <div class="text-white mb-3"><span class="text-black-opacity-05"><small>De Kleber Nunes <span class="sep">/</span> {{podcast.duration}}</small></span></div>
+              <p class="mb-4">{{podcast.resume}}</p>
+  
+              <div class="player">
+                <audio id="player2" preload="none" controls style="max-width: 100%">
+                  <source src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3" type="audio/mp3">
+                </audio>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!--

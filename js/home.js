@@ -1,14 +1,14 @@
-var app = angular.module("home")
+var app = angular.module("home", [])
 
 app.controller('HomeController', HomeController);
 
-function HomeController($scope, $timeout) {
+function HomeController($http, $scope) {
     $http({
         method: 'GET',
         url: 'https://makebrazilemo.herokuapp.com/find-all-podcast'
     }).then(function successCallback(response) {
-        console.log(response)
+        $scope.podcasts = response.data.content
     }, function errorCallback(response) {
-        console.log(response)
+        $scope.podcasts = "Nenhum podcast"
     });
 }
