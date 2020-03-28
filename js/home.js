@@ -12,7 +12,7 @@ var jqxhr = $.get( "https://makebrazilemo.herokuapp.com/find-all-podcast")
             '           <p class="mb-4">' + podcasts[i].resume + '</p>' +
             '           <div class="player">' +
             '               <audio id="player2" preload="none" controls style="max-width: 100%">' +
-            '                   <source src="https://firebasestorage.googleapis.com/v0/b/portfolio-kleber-nunes.appspot.com/o/podcast%2301.mp3?alt=media&token=16b8a75b-95a4-4200-a185-1420f7473200" type="audio/mp3">' +
+            '                   <source src="' + podcasts[i].url + '" type="audio/mp3">' +
             '               </audio>' +
             '           </div>' +
             '       </div>' +
